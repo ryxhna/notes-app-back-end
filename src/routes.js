@@ -1,7 +1,4 @@
-// import fungsi addNoteHandler
 const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler, } = require('./handler');
-
-//  agar web server dapat menyimpan catatan, ia perlu menyediakan route dengan path ‘/notes’ dan method ‘POST’
 const routes = [{
         method: 'POST',
         path: '/notes',
@@ -10,7 +7,6 @@ const routes = [{
     {
         method: 'GET',
         path: '/notes',
-        // Gunakan fungsi handler tersebut pada konfigurasi route.
         handler: getAllNotesHandler,
     },
     {
@@ -30,5 +26,4 @@ const routes = [{
     },
 ];
 
-// agar routes dapat digunakan oleh berkas server.js nantinya
 module.exports = routes;
